@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<TitledPane alignment="TOP_CENTER" contentDisplay="TOP" text="THE ADDRESS BOOK" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addressbookfx.FXMLDocumentController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="240.0" prefWidth="480.0" style="-fx-background-color: khaki;">
+         <children>
+            <HBox layoutX="60.0" layoutY="50.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="160.0" spacing="10.0" style="-fx-background-color: chocolate;">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <TitledPane fx:id="titledPaneAddNew" animated="false" onMouseClicked="#handleTilePaneAddNewClick" text="ADD NEW">
+                           <content>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="textFieldAddFirstName" promptText="First name here" />
+                                    <TextField fx:id="textFieldAddLastName" promptText="Last name here" />
+                                    <TextField fx:id="textFieldAddAddress" promptText="Address here" />
+                                    <TextField fx:id="textFieldAddPhone" promptText="Phone number here" />
+                                    <TextField fx:id="textFieldAddEmail" promptText="E-mail address here" />
+                                    <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#handleSaveAction" prefHeight="25.0" prefWidth="140.0" text="SAVE" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="titledPaneSearch" animated="false" expanded="false" onMouseClicked="#handleTilePaneSearchClick" text="SEARCH">
+                          <content>
+                              <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextField fx:id="textFieldSearchText" promptText="Search text here" />
+                                    <Button fx:id="buttonSearch" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="25.0" prefWidth="140.0" text="SEARCH" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </VBox>
+                  <TextArea fx:id="textAreaForData" editable="false" focusTraversable="false" prefHeight="220.0" prefWidth="290.0" style="-fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>
